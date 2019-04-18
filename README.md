@@ -37,3 +37,23 @@ En vervolgens in je pagina zetten:
 ```
 <MijnComponent />
 ```
+
+Gebruik deze kennis om een TodoRow component te maken en plaats deze in het TodoList Component.
+Het TodoRow component gaat alle informatie van 1 component weergeven, want het is 1 todo item.
+
+# Props
+In React kan je attributen geven aan je componenten, in react noemen ze deze attributen props.
+Als je een component props meegeeft kan je deze in het component gebruiken.
+Op deze manier geef je props mee aan je componenten: 
+```
+<MijnComponent 
+    mijnProp1="tekst"
+    mijnProp2={true}
+/>
+```
+De props komen dan binnen in het component als parameter in de functie of in ```this.props```
+Als volgt:
+```
+
+```
+geef op deze manier aan de TodoRow informatie mee om te tonen. 
