@@ -1,0 +1,38 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: url('../fonts/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoSlab;
+  src: url('../fonts/RobotoSlab-Regular.ttf');
+  font-weight: 700;
+}
+
+body {
+  background-color: $background-color;
+  font-family: RobotoSlab;
+  color: $font-color;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.todolist {
+  margin: 0 auto;
+  padding: 20px;
+  width: 800px;
+  height: 500px;
+  background-color: $container-color;
+  border-radius: $border-radius;
+  overflow: auto;
+}
