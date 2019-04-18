@@ -1,2 +1,4 @@
-# frontend-cursus
+# Frontend cursus
 Frontend cursus
+
+Clone project: 
