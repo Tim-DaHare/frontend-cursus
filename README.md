@@ -1,6 +1,3 @@
-# Frontend cursus
-Frontend cursus
-
 # Project opzetten
 Maak een map aan voor het project.
 navigeer naar de map in powershell en voer deze commando uit: 
