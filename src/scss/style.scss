@@ -1,38 +1,79 @@
 @font-face {
-  font-family: RobotoSlab;
-  src: url('../fonts/RobotoSlab-Regular.ttf');
+    font-family: RobotoSlab;
+    src: url('../fonts/RobotoSlab-Regular.ttf');
 }
 
 @font-face {
-  font-family: RobotoSlab;
-  src: url('../fonts/RobotoSlab-Regular.ttf');
-  font-weight: 700;
+    font-family: RobotoSlab;
+    src: url('../fonts/RobotoSlab-Bold.ttf');
+    font-weight: 700;
 }
 
 body {
-  background-color: $background-color;
-  font-family: RobotoSlab;
-  color: $font-color;
+    background-color: $background-color;
+    font-family: RobotoSlab;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    height: 35px;
+    font-weight: 700;
+    &.button--green {
+        background-color: $green;
+    }
+    &.button--yellow {
+        background-color: $yellow;
+    }
+    &.button--red {
+        background-color: $red;
+    }
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 32px;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+table {
+    background-color: $silver;
+    padding: 30px;
+    th {
+        font-weight: 700;
+    }
+
+    td, th {
+        padding: 10px 20px;
+        border-bottom: 1px $background-color solid;
+        text-align: left;
+        &.cell--center {
+            // text-align: center;
+        }
+        &.cell--right {
+            text-align: right;
+        }
+        &.cell--fixed-width {
+            // width: 100px;
+        }
+    }
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+    
 }
 
-.todolist {
-  margin: 0 auto;
-  padding: 20px;
-  width: 800px;
-  height: 500px;
-  background-color: $container-color;
-  border-radius: $border-radius;
-  overflow: auto;
+.todo-list {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    .todo-info__container {
+        display: flex;
+        p {
+            flex: 1;
+        }
+        button {
+            margin-left: 5px;
+        }
+    }
 }
