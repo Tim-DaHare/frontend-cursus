@@ -1,18 +1,20 @@
+# Introductie
+In deze cursus gaan we een todo website bouwen.
+Op deze pagina is alle kennis beschreven die je nodig hebt om de site te bouwen, maar mocht je vast komen te zitten kan je altijd naar de code in dit project kijken.
+
 # Project opzetten
-Maak een map aan voor het project.
-navigeer naar de map in powershell en voer deze commando uit: 
+navigeer naar de map in powershell of command prompt en voer deze commando uit: 
 ```
-git clone https://github.com/Tim-DaHare/frontend-cursus.git
+npx create-react app todolist_app
 ```
-Wacht tot het project geclonet is en voer deze commando uit: 
-```
-npm install
-```
-Als alle packages zijn geinstalleerd hoef je alleen nog het volgende commando uit te voeren:
+Dit commando genereert een map 'todolist app'.
+Als het project is geinstalleerd hoef je alleen nog het volgende commando uit te voeren:
 ```
 npm run start
 ```
 Laat dit laatse commando openstaan.
+Er wordt nu een browser tab geopent met het standaard React scherm.
+Open nu het bestand App.js in het gegenereerde project.
 
 # React components
 React componenten zorgen ervoor dat je html code in herbruikbare stukken kunt opstellen.
@@ -142,7 +144,7 @@ const MijnComponent = (props) => {
 }
 ```
 Dit werkt omdat (true && expression) altijd gelijk is aan de expression.
-Op deze manier wordt de data alleen getoont als de check correct is.
+Op deze manier wordt de data alleen getoont als de check true is.todo
 (als dit niet duidelijk is maakt dat niet uit. je kan gewoon verder zonder dit compleet te begrijpen.)
 
 # State
