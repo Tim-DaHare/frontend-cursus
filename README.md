@@ -5,7 +5,7 @@ Op deze pagina is alle kennis beschreven die je nodig hebt om de site te bouwen,
 # Project opzetten
 navigeer naar de map in powershell of command prompt en voer deze commando uit: 
 ```
-npx create-react app todolist_app
+npx create-react-app todolist_app
 ```
 Dit commando genereert een map 'todolist app'.
 Als het project is geinstalleerd hoef je alleen nog het volgende commando uit te voeren:
@@ -54,7 +54,7 @@ Het verschil tussen function components en class components is dat class compone
 
 Om dit component dan in een webpagina te gebruiken moet je eerst het component importeren:
 ```
-import TodoList from './components/MijnComponent'
+import MijnComponent from './components/MijnComponent'
 ```
 En vervolgens in je pagina zetten:
 ```
@@ -76,8 +76,8 @@ Op deze manier geef je props mee aan je componenten:
     mijnProp2={true}
 />
 ```
-De props komen dan binnen in het component als parameter in de functie of in ```this.props```
-Als volgt:
+De props komen dan binnen in het component als parameter in de functie of in `this.props`
+in een function component:
 ```
 const MijnComponent = (props) => {
     const variable1 = props.mijnProp1 /* "tekst" */
@@ -109,6 +109,8 @@ geef op deze manier de volgende informatie mee aan de TodoRow:
 - Titel
 - Beschrijving
 - Verlopingsdatum/tijd
+
+* je kan ook functies meegeven als props of parameters in javascript.
 
 
 # Data tonen met JSX
@@ -144,7 +146,7 @@ const MijnComponent = (props) => {
 }
 ```
 Dit werkt omdat (true && expression) altijd gelijk is aan de expression.
-Op deze manier wordt de data alleen getoont als de check true is.todo
+Op deze manier wordt de data alleen getoont als de check true is.
 (als dit niet duidelijk is maakt dat niet uit. je kan gewoon verder zonder dit compleet te begrijpen.)
 
 # State
@@ -220,3 +222,21 @@ Maak nu een simpel formulier onder de TodoList om alle informatie in te vullen v
 </form>
 ```
 Dit is een sjabloon wat je kunt gebruiken voor het formulier, het is aangeraden om dit in een apart component te zetten.
+Let op de onSubmit prop, dit is de functie die aangeroepen wordt als de submit knop word ingedrukt(alle waardes worden meegegeven).
+
+Maak nu een functie die alle waardes uit het formulier opslaan in een nieuwe todo in de state van de todolist met gebruik van de setState functie. vergeet niet in de handleSubmit een verwijzing naar deze functie te zetten.
+
+# Overige functionaliteiten
+De volgende dingen die nog moeten gebeuren zijn:
+- Een openklapbaar overzicht waar de details van de todo in staan.
+- In het overzicht moeten 3 knoppen komen; open, archiveren, verwijderen. De onClick prop van deze knop moet een functie zijn   die de todo een status geeft.
+- Een dropdown met opties om op te sorteren. De waarde van deze dropdown moet in de todolist state worden opgeslagen.
+
+De kennis die je nodig hebt om deze dingen te bouwen is nu tot je beschikking.
+Het is misschien nog handig om te kijken naar de volgende bronnen:
+https://reactjs.org/docs/conditional-rendering.html
+https://reactjs.org/docs/lists-and-keys.html
+De laatste is vooral belangrijk omdat hier wordt uitgelegd hoe je door een array kan loopen met behulp van Array.map
+en dat heb je nodig om de array van todo's te renderen die in de todolist state staat.
+
+Als je vast komt te zitten kun je altijd kijken naar de bestanden in deze repository, ik heb zelf hier een werkende todolist gecommit.
