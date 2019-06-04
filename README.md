@@ -233,9 +233,9 @@ De volgende dingen die nog moeten gebeuren zijn:
 - Een dropdown met opties om op te sorteren. De waarde van deze dropdown moet in de todolist state worden opgeslagen.
 
 De kennis die je nodig hebt om deze dingen te bouwen is nu tot je beschikking.
-Het is misschien nog handig om te kijken naar de volgende bronnen:
-https://reactjs.org/docs/conditional-rendering.html \ 
-https://reactjs.org/docs/lists-and-keys.html
+Het is misschien nog handig om te kijken naar de volgende bronnen:\
+https://reactjs.org/docs/conditional-rendering.html \
+https://reactjs.org/docs/lists-and-keys.html \
 De laatste is vooral belangrijk omdat hier wordt uitgelegd hoe je door een array kan loopen met behulp van Array.map
 en dat heb je nodig om de array van todo's te renderen die in de todolist state staat.
 
