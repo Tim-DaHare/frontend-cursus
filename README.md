@@ -2,13 +2,22 @@
 In deze cursus gaan we een todo website bouwen.
 Op deze pagina is alle kennis beschreven die je nodig hebt om de site te bouwen, maar mocht je vast komen te zitten kan je altijd naar de code in dit project kijken.
 
+Voor het maken van dit project gaan we React gebruiken.
+React is een javascript framework voor het bouwen van User interfaces.
+React kan er voor zorgen dat je hele website in 1 keer kan worden opgehaald in plaats van meerdere pagina's op te splitsen in meerdere netwerk verzoeken. 
+Daarnaast kan react je website in verschillende componenten, op deze manier kan je je website goed structureren.
+
 # Project opzetten
-navigeer naar de map in powershell of command prompt en voer deze commando uit: 
+Eerst heb je [NodeJs](https://nodejs.org/en/download/) nodig. zorg dat je npm 5.2 of hoger hebt.
+Dit kan je checken door ```npm -v``` in powershell te runnen. als de versie lager is dan 5.2; update dan node via de bovenstaande link.
+Als node is geinstalleerd kan je een project aanmaken.
+Maak een projecten folder aan en run dit commando in die folder: 
 ```JavaScript
 npx create-react-app todolist_app
 ```
 Dit commando genereert een map 'todolist app'.
-Als het project is geinstalleerd hoef je alleen nog het volgende commando uit te voeren:
+Navigeer naar deze map in powershell/command prompt: ```cd todolist_app```
+Hierna hoef je alleen nog het volgende commando uit te voeren:
 ```JavaScript
 npm run start
 ```
