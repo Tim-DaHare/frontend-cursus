@@ -4,12 +4,12 @@ Op deze pagina is alle kennis beschreven die je nodig hebt om de site te bouwen,
 
 # Project opzetten
 navigeer naar de map in powershell of command prompt en voer deze commando uit: 
-```
+```JavaScript
 npx create-react-app todolist_app
 ```
 Dit commando genereert een map 'todolist app'.
 Als het project is geinstalleerd hoef je alleen nog het volgende commando uit te voeren:
-```
+```JavaScript
 npm run start
 ```
 Laat dit laatse commando openstaan.
@@ -20,7 +20,7 @@ Open nu het bestand App.js in het gegenereerde project.
 React componenten zorgen ervoor dat je html code in herbruikbare stukken kunt opstellen.
 Je kan een react component zien als een html tag die je zelf kan programmeren.
 Zo kan je een nieuw React component maken en exporteren, maak een nieuw bestand met .jsx als bestandsextensie en vul in:
-```
+```JavaScript
 import React, { Component } from 'react'
 
 const MijnComponent = () => (
@@ -34,7 +34,7 @@ export default MijnComponent
 ```
 Dit is een function component, dat is eigenlijk een javascript functie die html terug geeft.
 Je kan ook een class component maken door een class te maken met een functie genaamd render:
-```
+```JavaScript
 import React, { Component } from 'react'
 
 class MijnComponent extends React.Component {
@@ -53,7 +53,7 @@ export default MijnComponent
 Het verschil tussen function components en class components is dat class components extra mogelijkheden hebben zoals bijvoorbeeld; state en lifecycle callbacks (wordt later uitgelegd). het voordeel van function components is dat je minder code hebt en dus meer overzicht.
 
 Om dit component dan in een webpagina te gebruiken moet je eerst het component importeren:
-```
+```JavaScript
 import MijnComponent from './components/MijnComponent'
 ```
 En vervolgens in je pagina zetten:
@@ -70,7 +70,7 @@ Later gaan we de TodoList vullen met meerdere instanties van TodoRow.
 In React kan je attributen geven aan je componenten, in react noemen ze deze attributen props.
 Als je een component props meegeeft kan je deze in het component gebruiken.
 Op deze manier geef je props mee aan je componenten: 
-```
+```JavaScript
 <MijnComponent 
     mijnProp1="tekst"
     mijnProp2={true}
@@ -78,7 +78,7 @@ Op deze manier geef je props mee aan je componenten:
 ```
 De props komen dan binnen in het component als parameter in de functie of in `this.props`
 in een function component:
-```
+```JavaScript
 const MijnComponent = (props) => {
     const variable1 = props.mijnProp1 /* "tekst" */
     const variable2 = props.mijnProp2 /* true */
@@ -91,7 +91,7 @@ const MijnComponent = (props) => {
 }
 ```
 of in een class component:
-```
+```JavaScript
 class MijnComponent extends React.Component {
     render() {
         const variable1 = this.props.mijnProp1 /* "tekst" */
@@ -115,7 +115,7 @@ geef op deze manier de volgende informatie mee aan de TodoRow:
 
 # Data tonen met JSX
 Nu je data heb meegegeven via de props is het tijd om die data te tonen:
-```
+```JavaScript
 const MijnComponent = (props) => {
     const variable1 = props.mijnProp1 /* "tekst" */
     const variable2 = props.mijnProp2 /* true */
@@ -132,7 +132,7 @@ In jsx kan je de variabele die je wilt tonen tussen ```{}``` zetten zoals boven 
 Toon op deze manier de props in de TodoRow. (Dit werkt voor function components en class components op dezelfde manier.)
 
 Je kan ook checks doen met jsx:
-```
+```JavaScript
 const MijnComponent = (props) => {
     const variable1 = props.mijnProp1 /* "tekst" */
     const variable2 = props.mijnProp2 /* true */
@@ -153,7 +153,7 @@ Op deze manier wordt de data alleen getoont als de check true is.
 In React kunnen class components een state hebben. de state is eigenlijk een javascript object die kan worden gebruikt om informatie op te slaan over de staat van het component. Dit gaan wij gebruiken om in het Todolist component alle Todo's op te slaan.
 
 Op deze manier stel je een standaard state in en toon je de data uit de state:
-```
+```JavaScript
 class MijnComponent extends React.Component {
     constructor(props) {
         super(props)
@@ -183,7 +183,7 @@ maak op deze manier een state in het TodoList component en zet in de state een a
 Om de state aan te passen **moet** je de setState functie gebruiken van react, het handige hiervan is dat je alleen de setState function hoeft op te roepen en alle informatie word gelijk getoont in de componenten.
 
 setState() voorbeeld:
-```
+```JavaScript
 class MijnComponent extends React.Component {
     constructor(props) {
         super(props)
@@ -213,7 +213,7 @@ Er wordt hier een knop toegevoegd die bij elke klik 1 optelt bij het totaal aant
 Omdat de setState functie de hele state vervangt moeten we de spread operator gebruiken: ```...``` dit kopieert alles uit de huidige state, vervolgens tellen we 1 op bij aantalVoorbeelden en dus word die waarde overschreven.
 
 Maak nu een simpel formulier onder de TodoList om alle informatie in te vullen voor een nieuwe todo en deze in de state te zetten.
-```
+```JavaScript
 <form onSubmit={this.handleSubmit}>
     <input name="title" type="text" placeholder="Titel"/> <br/>
     <input name="description" type="text" placeholder="Beschrijving"/> <br/>
